@@ -2,7 +2,7 @@ package stats
 
 import "math"
 
-const VERSION string = "0.0.0"
+const VERSION string = "0.0.1"
 
 type Summary struct {
   Last float64
@@ -24,7 +24,7 @@ func (s *Summary) Add(x, w float64) {
 }
 
 func (s *Summary) RD(x, a, w float64) {
-  d := (a - x) / a
+  d := (x - a) / a
   s.Add(d, w)
 }
 
